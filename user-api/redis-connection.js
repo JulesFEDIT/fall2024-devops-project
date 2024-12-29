@@ -22,4 +22,7 @@ client.on('end', () => {
   console.error('Redis connection closed unexpectedly');
 });
 
-module.exports = client;
+module.exports = {
+  ping: () => redisClient.ping(),
+  client,
+}
