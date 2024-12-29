@@ -10,27 +10,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Check out the code
+      #  Check out the code
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # 2. Set up Node.js environment
+      #  Set up Node.js environment
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16
 
-      # 3. Install dependencies
+      - name: Navigate to the user-api folder
+        run: cd user-api
+
+      # Install dependencies
       - name: Install Dependencies
         run: npm install
+        working-directory: user-api
 
-      # 4. Run tests
+      # Run tests
       - name: Run Tests
         run: npm test
+        working-directory: user-api
 
-      # 5. Build the project (si vous avez une étape de build)
+      #  Build the project (si vous avez une étape de build)
       - name: Build Project
         run: npm run build
+        working-directory: user-api
 
   deploy:
     needs: build
