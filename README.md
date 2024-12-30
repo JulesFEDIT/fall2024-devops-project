@@ -1,5 +1,3 @@
-# fall2024-devops-project
-
 # DevOps Project: Web Application with CI/CD, IaC, and Container Orchestration
 
 ## Overview
@@ -108,7 +106,7 @@ This project delivers a **user API web application** with CRUD functionality, le
     kubectl apply -f k8s/
     ```
 
-2. **Access the Application**:
+2. **Access to the application**:
 
     - Locally: http://localhost:3000
 
@@ -116,7 +114,32 @@ This project delivers a **user API web application** with CRUD functionality, le
     ```
     minikube service [service-name]
     ```
-
+3. **Run CRUD Operations**:
+- CREATE an user.
+  - For creating an user, you must inform an **id**, a **name** and a **email**.
+```powershell
+Invoke-WebRequest -Uri "http://localhost:3000/api/users" `
+  -Method POST `
+  -Headers @{"Content-Type"="application/json"} `
+  -Body '{"id": 1, "name": "example", "email": "example@example.com"}'
+```
+- UPDATE an user
+```powershell
+Invoke-WebRequest -Uri "http://localhost:3000/api/users/1" `
+  -Method PUT `
+  -Headers @{"Content-Type"="application/json"} `
+  -Body '{"name": "updated_example", "email": "updated_example@updated_example.com"}'
+``` 
+- READ an user
+```powershell
+Invoke-WebRequest -Uri "http://localhost:3000/api/users/1" `
+  -Method GET
+``` 
+- DELETE an user
+```powershell
+Invoke-WebRequest -Uri "http://localhost:3000/api/users/1" `
+  -Method DELETE
+``` 
 
 ### Testing
 
