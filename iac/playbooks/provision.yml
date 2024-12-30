@@ -1,0 +1,69 @@
+- hosts: all
+  become: true
+
+  tasks:
+    # 1. Update and install required packages
+    - name: Update all packages
+      yum:
+        name: "*"
+        state: latest
+
+    - name: Install Development Tools
+      yum:
+        name: "@Development Tools"
+        state: present
+
+    - name: Install Node.js and npm
+      yum:
+        name:
+          - nodejs
+          - npm
+        state: present
+
+    - name: Install Redis
+      yum:
+        name: redis
+        state: present
+
+    - name: Install Git and Curl
+      yum:
+        name:
+          - git
+          - curl
+        state: present
+
+    # 2. Enable and start Redis
+    - name: Enable Redis service
+      systemd:
+        name: redis
+        enabled: true
+        state: started
+
+    # 3. Set up the application
+    - name: Install application dependencies
+      command: npm install
+      args:
+        chdir: /home/vagrant/app
+
+    - name: Start the application
+      command: npm start &
+      args:
+        chdir: /home/vagrant/app
+
+    # 4. Health check
+    - name: Wait for application to be up
+      wait_for:
+        host: 127.0.0.1
+        port: 3000
+        timeout: 30
+
+    - name: Perform health check
+      uri:
+        url: http://127.0.0.1:3000/health
+        method: GET
+      register: health_check
+
+    - name: Fail if health check fails
+      fail:
+        msg: "Health check failed!"
+      when: health_check.status != 200
