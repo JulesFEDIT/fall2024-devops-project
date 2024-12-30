@@ -100,7 +100,8 @@ This project delivers a **user API web application** with CRUD functionality, le
 2. **Access the Application**:
 
     - Locally: http://localhost:3000
-Kubernetes: Get service URL:
+
+    - Kubernetes: Get service URL:
     ```
     minikube service [service-name]
     ```
@@ -128,7 +129,7 @@ Kubernetes: Get service URL:
 
 Gauthier Mallard & Jules Fedit
 
-Email: [Your Email]
+Emails: gauthier.mallard@edu.ece.fr  or jules.fedit@edu.ece.fr
 
 
 ### Additional Information
