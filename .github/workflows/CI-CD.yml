@@ -33,7 +33,7 @@ jobs:
         run: npm test
         working-directory: user-api
 
-      #  Build the project (si vous avez une étape de build)
+      #  Build the project
       - name: Build Project
         run: npm run build
         working-directory: user-api
