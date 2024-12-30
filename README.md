@@ -29,7 +29,7 @@ This project delivers a **user API web application** with CRUD functionality, le
 
 
 2. **CI/CD Pipeline**:
-   - Configured a CI/CD pipeline using [platform: GitHub Actions/GitLab CI/CD/Jenkins].
+   - Configured a CI/CD pipeline using GitHub Actions and Netlify.
    - Integrated build, test, and deployment stages.
    - Deployed the application to [Heroku/Netlify].
 
