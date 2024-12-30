@@ -2,7 +2,6 @@ const redisClient = require('../redis-connection');
 
 // Create a new user
 exports.createUser = async (req, res) => {
-  console.log('Redis client:', redisClient);
   const { id, name, email } = req.body;
 
   if (!id || !name || !email) {

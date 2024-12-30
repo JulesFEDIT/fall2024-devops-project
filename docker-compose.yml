@@ -1,0 +1,18 @@
+services:
+  user-api:
+    build:
+      context: ./user-api # Build from the current directory where the Dockerfile is located
+    container_name: user-api-container
+    ports:
+      - "3000:3000" # Maps port 3000 on the host to port 3000 in the container
+    environment:
+      - REDIS_HOST=redis # Redis service hostname as defined in this file
+      - REDIS_PORT=6379
+    depends_on:
+      - redis # Ensure Redis starts before the app
+
+  redis:
+    image: redis:6-alpine # Lightweight Redis image
+    container_name: redis-container
+    ports:
+      - "6379:6379" # Maps Redis port 6379

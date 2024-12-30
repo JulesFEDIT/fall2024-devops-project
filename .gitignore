@@ -1,0 +1,4 @@
+user-api/node_modules/
+user-api/.dockerignore
+user-api/.env
+iac/.vagrant/
