@@ -11,10 +11,22 @@ This project delivers a **user API web application** with CRUD functionality, le
 ## Work Performed
 
 1. **Web Application**:
-   - Developed a user API with CRUD functionality in [your programming language].
-   - Implemented Redis as the database backend.
-   - Included a health check endpoint (`/health`) for application status monitoring.
-   - Wrote unit tests, API tests, and integration tests for configuration and connection validation.
+   - Developed a user API with CRUD functionality in javascript.
+   - Implemented Redis as the database backend:
+   
+     ![image](https://github.com/user-attachments/assets/cf00bead-30b7-4016-9d21-edd9a4389ef9)
+
+   - Included a health check endpoint (`/health`) for application status monitoring:
+   
+     ![image](https://github.com/user-attachments/assets/856d6821-af79-4b7b-b169-18387435961e)
+
+   - Wrote unit tests, API tests, and integration tests for configuration and connection validation:
+  
+     ![image](https://github.com/user-attachments/assets/db969a00-22c2-4cec-8f07-b0723f076fb0)
+
+     ![image](https://github.com/user-attachments/assets/d26d9227-af6d-448b-9693-a3fd3e26d231)
+
+
 
 2. **CI/CD Pipeline**:
    - Configured a CI/CD pipeline using [platform: GitHub Actions/GitLab CI/CD/Jenkins].
