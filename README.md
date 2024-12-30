@@ -29,14 +29,14 @@ This project delivers a **user API web application** with CRUD functionality, le
 
 
 2. **CI/CD Pipeline**:
-   - Configured a CI/CD pipeline using GitHub Actions and Netlify.
+   - Configured a CI/CD pipeline using GitHub Actions.
    - Integrated build, test, and deployment stages.
-   - Deployed the application to [Heroku/Netlify].
+   - Deployed the application to Netlify.
 
 3. **Infrastructure as Code (IaC)**:
    - Created a virtual machine using Vagrant (Linux distribution: Ubuntu/Debian/etc.).
    - Provisioned the VM with Ansible to install:
-     - Language runtime ([Node.js, Python, etc.]).
+     - Language runtime.
      - Redis database.
      - The web application.
    - Set up health checks during provisioning.
@@ -60,8 +60,7 @@ This project delivers a **user API web application** with CRUD functionality, le
 
 1. **Clone Repository**:
    ```bash
-   git clone [repository-url]
-   cd [repository-folder]
+   git clone https://github.com/JulesFEDIT/fall2024-devops-project.git
    ```
 
 
@@ -133,10 +132,11 @@ This project delivers a **user API web application** with CRUD functionality, le
 
 ### Links and Platforms
 
-    - Docker Hub: [Docker Hub Link]
-    - CI/CD Pipeline: [Pipeline Link]
-    - Kubernetes Cluster: [Cluster Info]
+   - Docker Hub: [Docker Hub Link]
+   - CI/CD Pipeline: [Pipeline Link]
+   - Kubernetes Cluster: [Cluster Info]
 
+   
 ### Authors
 
 Gauthier Mallard & Jules Fedit
@@ -145,8 +145,9 @@ Emails: gauthier.mallard@edu.ece.fr  or jules.fedit@edu.ece.fr
 
 
 ### Additional Information
-    - Logs, configurations, and scripts are available in their respective folders.
-    - For any issues, please create a GitHub issue in the repository.
+
+   - Logs, configurations, and scripts are available in their respective folders.
+   - For any issues, please create a GitHub issue in the repository.
 
 
 
