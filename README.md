@@ -114,7 +114,7 @@ This project delivers a **user API web application** with CRUD functionality, le
     ```
     minikube service [service-name]
     ```
-3. **Run CRUD Operations**:
+3. **Run CRUD Operations with PowerShell**:
 - CREATE an user.
   - For creating an user, you must inform an **id**, a **name** and a **email**.
 ```powershell
