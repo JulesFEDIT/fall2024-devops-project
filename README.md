@@ -61,20 +61,22 @@ This project delivers a **user API web application** with CRUD functionality, le
    git clone https://github.com/JulesFEDIT/fall2024-devops-project.git
    ```
 
-
-2. **Set Up Virtual Machine**:
+2. **Launch redis-server**
+   - You have to lauch `redis-server.exe` in order to establish the connection with the database and let it open. Without doing this, the application will not work properly.
+  
+3. **Set Up Virtual Machine**:
     - Install Vagrant and VirtualBox.
     - Run:
     ```
     vagrant up
     ```
-3. **Provisioning**:
+4. **Provisioning**:
 
     Ansible will automatically install dependencies, database, and the application.
-4. **Prepare Docker Environment**:
+5. **Prepare Docker Environment**:
 
     - Install Docker and Docker Compose.
-5. **Install Kubernetes**:
+6. **Install Kubernetes**:
 
     - Install Minikube:
     ```
